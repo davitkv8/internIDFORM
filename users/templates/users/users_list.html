@@ -1,0 +1,17 @@
+{% extends 'users/base.html' %}
+{% load static %}
+{% block content %}
+    {% for user in users %}
+        <div id="div1">
+        <p id="p1">ID CARD</p>
+        <img src={{ user.image.url }} alt="">
+       <div id="div2">
+           <p id="p2"><label id="label1">First Name:</label> <label id="label2">{{ user.first_name }}</label></p>
+           <p id="p2" style="margin-top: 0px;"><label id="label1">Last Name:</label> <label id="label2">{{ user.last_name }}</label></p>
+           <p id="p2"><label id="label1">D.O.B:</label> <label id="label2">{{ user.birth_date }}</label></p>
+           <p id="p2"><label id="label1">SEX:</label> <label id="label2">{{ user.sex }}</label></p>
+           <p id="p2"><label id="label1">ID NO:</label> <label id="label2">{{ user.document_id }}</label></p>
+       </div>
+    </div>
+    {% endfor %}
+{% endblock content %}
