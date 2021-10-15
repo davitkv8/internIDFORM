@@ -10,4 +10,3 @@ class UsersListView(ListView):
     context_object_name = 'users'
 
 
-

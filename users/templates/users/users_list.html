@@ -8,9 +8,20 @@
        <div id="div2">
            <p id="p2"><label id="label1">First Name:</label> <label id="label2">{{ user.first_name }}</label></p>
            <p id="p2" style="margin-top: 0px;"><label id="label1">Last Name:</label> <label id="label2">{{ user.last_name }}</label></p>
+           <p id="p2"><label id="label1">CIT:</label> <label id="label2">{{ user.citizenship }}</label></p>
            <p id="p2"><label id="label1">D.O.B:</label> <label id="label2">{{ user.birth_date }}</label></p>
            <p id="p2"><label id="label1">SEX:</label> <label id="label2">{{ user.sex }}</label></p>
            <p id="p2"><label id="label1">ID NO:</label> <label id="label2">{{ user.document_id }}</label></p>
+           <p id="p2"><label id="label1">DOCUMENT NO:</label> <label id="label2">{{ user.document_no }}</label></p>
+           <p id="p2"><label id="label1">DATE OF ISSUE</label> <label id="label2">{{ user.date_of_issue }}</label></p>
+           <p id="p2"><label id="label1">DATE EXPIRES</label> <label id="label2">{{ user.date_expires }}</label></p>
+
+           <br>
+           <div class="mrz-code">
+               {% for i in user.get_formatted_mrz %}
+                   <p id="p2"><label id="label1"></label> <label id="label2">{{ i }}</label></p>
+               {% endfor %}
+           </div>
        </div>
     </div>
     {% endfor %}

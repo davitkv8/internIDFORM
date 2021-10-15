@@ -2,12 +2,12 @@ body{
             background-color: silver;
         }
         #div1{
-            margin: 0px;
+            position: center;
+            margin: 0px auto;
             padding: 0px;
             border: 2px solid black;
-            width: 540px;
-            height: 350px;
-            margin-left: 470px;
+            width: 640px;
+            height: 480px;
             margin-top: 60px;
             border-radius: 0px;
             background-color: white;
@@ -32,12 +32,6 @@ body{
             margin-left: 20px;
             float: left;
         }
-        #div2{
-            float: left;
-            margin-left: 40px;
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
         #p2{
             margin-top: 0px;
             margin-bottom: 5px;
@@ -61,3 +55,8 @@ body{
             float: left;
             margin-left: 10px;
         }
+
+
+.mrz-code{
+    text-align: center;
+}
